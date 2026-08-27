@@ -554,14 +554,14 @@ function initVibeFeedback() {
     reviewForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('revName').value;
-      const handle = document.getElementById('revHandle').value || `@${name.toLowerCase().replace(/\s+/g, '_')}`;
+      const name = document.getElementById('revName').value.trim();
+      const handle = document.getElementById('revHandle').value.trim() || `@${name.toLowerCase().replace(/\s+/g, '_')}`;
       const eventName = document.getElementById('revEvent').value;
       const rating = parseInt(ratingInput ? ratingInput.value : 5, 10);
       const musicVal = document.getElementById('sliderMusic') ? `${document.getElementById('sliderMusic').value}%` : '100%';
       const crowdVal = document.getElementById('sliderCrowd') ? `${document.getElementById('sliderCrowd').value}%` : '100%';
       const ambienceVal = document.getElementById('sliderAmbience') ? `${document.getElementById('sliderAmbience').value}%` : '100%';
-      const quote = document.getElementById('revQuote').value;
+      const quote = document.getElementById('revQuote').value.trim();
 
       const newReview = {
         id: `rev-${Date.now()}`,
@@ -575,19 +575,29 @@ function initVibeFeedback() {
         verified: true
       };
 
-      const wallGrid = document.getElementById('wallOfLoveGrid');
-      if (wallGrid) {
-        const reviewEl = document.createElement('div');
-        reviewEl.className = 'review-card glass-panel new-item-glow';
-        reviewEl.innerHTML = createReviewCardHTML(newReview);
-        wallGrid.prepend(reviewEl);
+      // Save to localStorage
+      try {
+        const saved = JSON.parse(localStorage.getItem('beyond_hours_user_reviews') || '[]');
+        saved.unshift(newReview);
+        localStorage.setItem('beyond_hours_user_reviews', JSON.stringify(saved));
+      } catch (err) {
+        console.warn('Could not save to localStorage', err);
       }
 
-      showToast('Vibe Rating Submitted! 🔥', 'Thank you for sharing your nightlife story. Your review is now live on the Wall of Love!');
+      // Re-render Wall of Love
+      renderWallOfLove();
+
+      showToast('Review Submitted! 🔥', 'Thank you for sharing your nightlife story! Your review is now live on the Wall of Love.');
       reviewForm.reset();
       
       stars.forEach(s => s.classList.add('active'));
       if (ratingInput) ratingInput.value = 5;
+
+      // Smooth scroll to Wall of Love
+      const wallSection = document.getElementById('wallOfLove');
+      if (wallSection) {
+        wallSection.scrollIntoView({ behavior: 'smooth' });
+      }
     });
   }
 }
@@ -596,11 +606,48 @@ function initVibeFeedback() {
  * 10. Wall of Love Renderer
  */
 function initWallOfLove() {
+  renderWallOfLove();
+}
+
+function renderWallOfLove() {
   const config = window.BEYOND_CONFIG;
   const grid = document.getElementById('wallOfLoveGrid');
-  if (!config || !config.testimonials || !grid) return;
+  if (!grid) return;
 
-  grid.innerHTML = config.testimonials.map(item => `
+  let allReviews = [];
+
+  // 1. Get from localStorage
+  try {
+    const local = JSON.parse(localStorage.getItem('beyond_hours_user_reviews') || '[]');
+    allReviews = allReviews.concat(local);
+  } catch (err) {
+    console.warn(err);
+  }
+
+  // 2. Get from config if any
+  if (config && config.testimonials && config.testimonials.length > 0) {
+    allReviews = allReviews.concat(config.testimonials);
+  }
+
+  if (allReviews.length === 0) {
+    grid.innerHTML = `
+      <div class="empty-reviews-card glass-panel" style="grid-column: 1 / -1; padding: 50px 30px; text-align: center; max-width: 700px; margin: 0 auto; border: 1px solid rgba(255, 46, 147, 0.35); border-radius: var(--radius-lg); box-shadow: 0 10px 35px rgba(0,0,0,0.6), 0 0 25px var(--pink-glow);">
+        <div style="font-size: 2.2rem; margin-bottom: 10px;">⭐✨</div>
+        <span class="section-badge">ATTENDEE EXPERIENCES</span>
+        <h3 style="font-family: var(--font-logo-serif); font-size: 1.8rem; margin-bottom: 10px; color: #FFF;">Be The First To Share Your Vibe</h3>
+        <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto 24px; font-size: 0.95rem; line-height: 1.6;">
+          Attended our latest night? Rate the sound, crowd & ambience in the form above — your story will automatically appear live on the Wall of Love!
+        </p>
+        <a href="#feedback" class="btn btn-primary-gradient">
+          <span>Rate The Nightlife Vibe</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+      </div>
+    `;
+    return;
+  }
+
+  grid.innerHTML = allReviews.map(item => `
     <div class="review-card glass-panel" data-tilt>
       ${createReviewCardHTML(item)}
     </div>
@@ -614,7 +661,7 @@ function createReviewCardHTML(item) {
     <div class="review-card-header">
       <div class="review-user-info">
         <div class="review-avatar-wrap">
-          <span>${item.name.charAt(0)}</span>
+          <span>${item.name.charAt(0).toUpperCase()}</span>
         </div>
         <div>
           <div class="review-user-name">${item.name} ${item.verified ? '<span class="verified-badge" title="Verified Party-Goer">✓</span>' : ''}</div>

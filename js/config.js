@@ -188,53 +188,8 @@ const BEYOND_CONFIG = {
     }
   ],
 
-  // Wall of Love
-  testimonials: [
-    {
-      id: "rev-1",
-      name: "Aaditya Varma",
-      handle: "@aaditya_v",
-      event: "Neon Lake Mirage (Edition 03)",
-      rating: 5,
-      vibes: { music: "10/10", crowd: "Fire 🔥", ambience: "Insane ✨" },
-      quote: "Udaipur literally had nothing like this until Beyond Hours came in. The sound system and crowd energy till 4 AM were unmatchable!",
-      date: "Last Saturday",
-      verified: true
-    },
-    {
-      id: "rev-2",
-      name: "Sanya Mehta",
-      handle: "@sanyamehta_x",
-      event: "Secret Rooftop Soirée",
-      rating: 5,
-      vibes: { music: "Melodic 🎵", crowd: "Elite 🥂", ambience: "10/10 ✨" },
-      quote: "The skyline view, the aesthetic lighting and the cocktails were top tier. Hands down the best curated vibe in town.",
-      date: "2 weeks ago",
-      verified: true
-    },
-    {
-      id: "rev-3",
-      name: "Kabir Shekhawat",
-      handle: "@kabir.shekh",
-      event: "Vault Underground Techno",
-      rating: 5,
-      vibes: { music: "Peak Bass 💣", crowd: "Wild ⚡", ambience: "Dark Luxury 🖤" },
-      quote: "Real underground techno culture in Rajasthan! No random commercial playlist, pure unfiltered electronic heaven.",
-      date: "3 weeks ago",
-      verified: true
-    },
-    {
-      id: "rev-4",
-      name: "Tanya Rathore",
-      handle: "@tanya.rathore_",
-      event: "Private Villa After-Hours",
-      rating: 5,
-      vibes: { music: "Afro House 🎶", crowd: "10/10 👑", ambience: "Ultra Luxury ✨" },
-      quote: "Booked a private VIP table for my birthday after-party. The Beyond Hours team handled everything like magic.",
-      date: "1 month ago",
-      verified: true
-    }
-  ]
+  // Wall of Love (Live attendee reviews submitted via the website)
+  testimonials: []
 };
 
 if (typeof window !== "undefined") {
