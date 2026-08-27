@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO & Brand Metadata -->
+  <title>Beyond Hours — Where Plans End, Stories Begin | Udaipur Nightlife & Social Events</title>
+  <meta name="description" content="Beyond Hours is Udaipur's premier dark luxury nightlife, after-hours and exclusive party experience collective. Book VIP passes, explore latest drops and rate vibes." />
+  <meta name="keywords" content="Beyond Hours, Udaipur Nightlife, After Hours Udaipur, Luxury Parties Udaipur, Club Nights Rajasthan, Party Passes Udaipur, VIP Booking Udaipur, @beyondhours_" />
+  <meta name="theme-color" content="#08060d" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Beyond Hours — Udaipur Nightlife Collective" />
+  <meta property="og:description" content="We make plans you didn't know you needed. Where plans end, stories begin ♡" />
+  <meta property="og:image" content="assets/images/beyond_hours_logo.png" />
+  <meta property="og:site_name" content="Beyond Hours" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon with official Logo -->
+  <link rel="icon" type="image/png" href="assets/images/beyond_hours_logo.png" />
+</head>
+<body>
+
+  <!-- Dynamic Ambient Nightlife Canvas (Pink, Purple & Electric Gold Bokeh) -->
+  <canvas id="atmosphereCanvas"></canvas>
+
+  <!-- 1. Sticky Navigation Bar -->
+  <header class="navbar-wrapper" id="mainNav">
+    <div class="nav-container">
+      <a href="#" class="brand-logo" id="navLogo">
+        <div class="logo-emblem-wrap">
+          <img src="assets/images/beyond_hours_logo.png" alt="Beyond Hours Logo" class="logo-emblem-img" />
+        </div>
+        <div class="logo-typography">
+          <span class="logo-main-title pink-purple-gradient-text">Beyond</span>
+          <span class="logo-sub-hours">HOURS</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#instagramHub" class="nav-link">Instagram</a>
+        <a href="#drops" class="nav-link">Drops</a>
+        <a href="#events" class="nav-link">Events</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#booking" class="nav-link">Book VIP</a>
+        <a href="#feedback" class="nav-link">Vibe Check</a>
+        <a href="#wallOfLove" class="nav-link">Wall of Love</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Ambient Sound Synthesizer Toggle -->
+        <button class="vibe-audio-btn" id="vibeAudioToggle" aria-label="Toggle Nightlife Sound Vibe">
+          <span class="sound-wave"><span></span><span></span><span></span></span>
+          <span>Soundtrack Vibe</span>
+        </button>
+
+        <a href="#booking" class="btn btn-primary-gradient">
+          <span>Book VIP Table</span>
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Open Navigation Menu">
+          <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. Cinematic Hero Section with Official Logo & Exact Typography -->
+    <section class="hero-section" id="hero">
+      <div class="hero-overlay-glow"></div>
+      <div class="hero-container">
+        
+        <!-- Center Floating Official Instagram Emblem -->
+        <div class="hero-emblem-badge">
+          <div class="hero-emblem-ring">
+            <img src="assets/images/beyond_hours_logo.png" alt="Beyond Hours Instagram Logo" class="hero-emblem-img" />
+          </div>
+        </div>
+
+        <!-- Live City & Nightlife Status Badge -->
+        <div>
+          <div class="hero-location-badge">
+            <span class="pulse-dot"></span>
+            <span>📍 Udaipur's Premier Nightlife & Event Collective</span>
+          </div>
+        </div>
+
+        <!-- Master Title styled exactly as Logo Typography -->
+        <div class="hero-logo-box">
+          <h1 class="hero-title-beyond brand-shimmer-text">BEYOND</h1>
+          <div class="hero-title-hours">H O U R S</div>
+        </div>
+
+        <!-- Subscript from Logo: "WHERE PLANS END, stories begin ♡" -->
+        <div class="hero-story-script-wrapper">
+          <div class="hero-story-caption">WHERE PLANS END,</div>
+          <div class="hero-story-script">
+            stories begin <span class="heart">♡</span>
+          </div>
+        </div>
+
+        <!-- Core Tagline -->
+        <p class="hero-main-tagline" data-brand="tagline">
+          "we make plans you didn't know you needed."
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="hero-cta-group">
+          <a href="#events" class="btn btn-primary-gradient">
+            <span>Upcoming Party Passes</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <a href="#booking" class="btn btn-ghost-neon">
+            <span>VIP / Party Inquiry 🍾</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+
+        <!-- Instagram Direct Social Badge -->
+        <div class="hero-social-strip">
+          <a href="https://www.instagram.com/beyondhours_?igsi=N2tiY3h5NTVkNXpt" target="_blank" rel="noopener noreferrer" class="hero-social-link">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+            <span>Follow <strong>@beyondhours_</strong> on Instagram</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. Real Official Instagram Profile Hub & Direct Connect (Replaced fake mock stats) -->
+    <section class="ig-hub-section" id="instagramHub">
+      <div class="section-container" id="instagramHubContainer">
+        <!-- Dynamically rendered real IG profile card -->
+      </div>
+    </section>
+
+    <!-- 4. Infinite Marquee Party Ticker (Pink & Purple Neon) -->
+    <div class="marquee-container" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack">
+        <!-- Populated dynamically from config.js -->
+      </div>
+    </div>
+
+    <!-- 5. Latest Drops (Slot 1: 9:16 Reel Player, Slot 2: Latest Post) -->
+    <section class="drops-section" id="drops">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">FRESH FROM INSTAGRAM</span>
+          <h2 class="section-title">Latest <span class="pink-purple-gradient-text">Drops & Reels</span></h2>
+          <p class="section-subtitle">Catch the raw after-hours energy from our latest Udaipur parties. Updated live directly from @beyondhours_.</p>
+        </div>
+
+        <div class="drops-grid" id="latestDropsContainer">
+          <!-- Dynamic Drops from config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Upcoming Events & RSVP Passes Calendar -->
+    <section class="events-section" id="events">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">AFTER-HOURS CALENDAR</span>
+          <h2 class="section-title">Upcoming <span class="pink-purple-gradient-text">Parties & Passes</span></h2>
+          <p class="section-subtitle">Secure your guestlist pass & VIP table bookings for Udaipur's hottest upcoming nightlife gatherings.</p>
+        </div>
+
+        <div class="events-grid" id="eventsGrid">
+          <!-- Dynamic Event Cards Populated from config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Dynamic Nightlife Gallery Grid & Filter Tabs -->
+    <section class="gallery-section" id="gallery">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">NIGHTLIFE MEMORIES</span>
+          <h2 class="section-title">Beyond <span class="pink-purple-gradient-text">Visuals</span></h2>
+          <p class="section-subtitle">Snapshots of unscripted moments, euphoric bass drops and lakefront celebrations.</p>
+        </div>
+
+        <div class="gallery-filter-bar" id="galleryFilterTabs">
+          <!-- Dynamic Category Tabs -->
+        </div>
+
+        <div class="gallery-masonry-grid" id="galleryGrid">
+          <!-- Dynamic Gallery Cards with Click-to-Lightbox -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Curated Concepts Showcase -->
+    <section class="experiences-section" id="experiences">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">CURATED CONCEPTS</span>
+          <h2 class="section-title">Signature <span class="pink-purple-gradient-text">Beyond Hours</span> Vibes</h2>
+          <p class="section-subtitle">From underground techno temples to secret lake-view rooftop lounges — discover how we redefine Udaipur's nightlife.</p>
+        </div>
+
+        <div class="experiences-grid" id="experiencesGrid">
+          <!-- Dynamic 3D Tilt Experience Cards from config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. VIP / Party Inquiry Form Booking Engine -->
+    <section class="booking-section" id="booking">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">BESPOKE CELEBRATIONS</span>
+          <h2 class="section-title">VIP Table & <span class="pink-purple-gradient-text">Party Inquiries</span></h2>
+          <p class="section-subtitle">Planning a private villa bash, birthday celebration or seeking an exclusive VIP table? Let us craft an unscripted night.</p>
+        </div>
+
+        <div class="booking-form-card glass-panel">
+          <form id="vipBookingForm">
+            <div class="booking-form-grid">
+              
+              <div class="form-group">
+                <label class="form-label" for="bookName">Full Name *</label>
+                <input type="text" id="bookName" class="form-input" placeholder="e.g. Aryan Sharma" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bookPhone">WhatsApp / Phone *</label>
+                <input type="tel" id="bookPhone" class="form-input" placeholder="e.g. +91 98765 43210" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bookIg">Instagram Handle</label>
+                <input type="text" id="bookIg" class="form-input" placeholder="e.g. @aryansharma" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bookEventType">Event / Inquiry Type *</label>
+                <select id="bookEventType" class="form-select" required>
+                  <option value="VIP Table Booking (Upcoming Event)">VIP Table Booking (Upcoming Event)</option>
+                  <option value="Private Villa / Pool Party">Private Villa / Pool Party</option>
+                  <option value="Birthday / Bachelorette Bash">Birthday / Bachelorette Bash</option>
+                  <option value="After-Hours Gathering">Secret After-Hours Gathering</option>
+                  <option value="Corporate / Brand Social">Corporate / Brand Social</option>
+                  <option value="Custom Bespoke Event">Custom Bespoke Event</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bookDate">Expected Date / Weekend</label>
+                <input type="date" id="bookDate" class="form-input" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bookGuests">Approximate Group Size *</label>
+                <select id="bookGuests" class="form-select" required>
+                  <option value="1-2 Guests (Stag / Couple)">1-2 Guests (Stag / Couple)</option>
+                  <option value="3-5 Guests (Close Crew)">3-5 Guests (Close Crew)</option>
+                  <option value="6-10 Guests (VIP Table)">6-10 Guests (VIP Table)</option>
+                  <option value="10-25 Guests (Private Cabana)">10-25 Guests (Private Cabana)</option>
+                  <option value="25+ Guests (Full Venue / Villa Takeover)">25+ Guests (Full Venue / Villa Takeover)</option>
+                </select>
+              </div>
+
+              <div class="form-group-full">
+                <label class="form-label" for="bookVibe">Preferred Music & Vibe Style</label>
+                <select id="bookVibe" class="form-select">
+                  <option value="Melodic House & Techno">Melodic House & Techno</option>
+                  <option value="Commercial Electronic & EDM">Commercial Electronic & EDM</option>
+                  <option value="Hip-Hop & Afro Tech">Hip-Hop & Afro Tech</option>
+                  <option value="Sunset Chill into Progressive">Sunset Chill into Progressive</option>
+                  <option value="Curate a Custom DJ Lineup">Curate a Custom DJ Lineup for Us</option>
+                </select>
+              </div>
+
+              <div class="form-group-full">
+                <label class="form-label" for="bookNotes">Special Requests / Bottle Service / Custom Needs</label>
+                <textarea id="bookNotes" class="form-textarea" placeholder="Tell us about bottle preferences, cake arrangements, transport or timing..."></textarea>
+              </div>
+
+              <div class="form-group-full">
+                <button type="submit" class="btn btn-primary-gradient booking-submit-btn">
+                  <span>Send VIP Inquiry via WhatsApp 🚀</span>
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"><path d="M22 2 11 13"></path><path d="m22 2-7 20-4-9-9-4 20-7z"></path></svg>
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Party-Goer Feedback & Interactive Vibe Rating -->
+    <section class="feedback-section" id="feedback">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">ATTENDEE VIBE CHECK</span>
+          <h2 class="section-title">Rate the <span class="pink-purple-gradient-text">Nightlife Vibe</span></h2>
+          <p class="section-subtitle">Were you at our last party? Share your memory, rate the music & crowd, and get featured on the Wall of Love!</p>
+        </div>
+
+        <div class="feedback-grid">
+          
+          <!-- Interactive Vibe Rating Controls -->
+          <div class="vibe-meter-box glass-panel">
+            <h3 class="vibe-meter-title">Rate Your Experience</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Tap stars and tune the vibe meters based on your night:</p>
+
+            <div class="vibe-star-selector" id="vibeStarSelector">
+              <button type="button" class="vibe-star-btn active" data-val="1">★</button>
+              <button type="button" class="vibe-star-btn active" data-val="2">★</button>
+              <button type="button" class="vibe-star-btn active" data-val="3">★</button>
+              <button type="button" class="vibe-star-btn active" data-val="4">★</button>
+              <button type="button" class="vibe-star-btn active" data-val="5">★</button>
+            </div>
+
+            <div class="vibe-sliders-wrapper">
+              <div class="vibe-slider-group">
+                <div class="slider-label-row">
+                  <span>🎵 Music & Sound System</span>
+                  <span class="vibe-val-badge" id="sliderMusicVal">100%</span>
+                </div>
+                <input type="range" id="sliderMusic" class="vibe-slider" min="50" max="100" value="100" />
+              </div>
+
+              <div class="vibe-slider-group">
+                <div class="slider-label-row">
+                  <span>👥 Crowd Energy</span>
+                  <span class="vibe-val-badge" id="sliderCrowdVal">100%</span>
+                </div>
+                <input type="range" id="sliderCrowd" class="vibe-slider" min="50" max="100" value="100" />
+              </div>
+
+              <div class="vibe-slider-group">
+                <div class="slider-label-row">
+                  <span>✨ Ambience & Lighting</span>
+                  <span class="vibe-val-badge" id="sliderAmbienceVal">100%</span>
+                </div>
+                <input type="range" id="sliderAmbience" class="vibe-slider" min="50" max="100" value="100" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Attendee Review Form -->
+          <div class="vibe-meter-box glass-panel">
+            <h3 class="vibe-meter-title">Share Your Story</h3>
+            <form id="vibeReviewForm">
+              <input type="hidden" id="ratingValue" value="5" />
+
+              <div class="form-group" style="margin-bottom: 14px;">
+                <label class="form-label" for="revName">Your Name *</label>
+                <input type="text" id="revName" class="form-input" placeholder="e.g. Maya Kapoor" required />
+              </div>
+
+              <div class="form-group" style="margin-bottom: 14px;">
+                <label class="form-label" for="revHandle">Instagram Handle</label>
+                <input type="text" id="revHandle" class="form-input" placeholder="e.g. @mayak" />
+              </div>
+
+              <div class="form-group" style="margin-bottom: 14px;">
+                <label class="form-label" for="revEvent">Event Attended *</label>
+                <select id="revEvent" class="form-select" required>
+                  <option value="Neon Lake Mirage">Neon Lake Mirage</option>
+                  <option value="Midnight Eclipse: Vault Underground">Midnight Eclipse: Vault Underground</option>
+                  <option value="Secret Rooftop Soirée">Secret Rooftop Soirée</option>
+                  <option value="Royal Velvet Afterhours">Royal Velvet Afterhours</option>
+                  <option value="Other Beyond Hours Party">Other Beyond Hours Party</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 18px;">
+                <label class="form-label" for="revQuote">Your Memory / Review Quote *</label>
+                <textarea id="revQuote" class="form-textarea" placeholder="What made that night unforgettable? (Music, crowd, after-hours moments...)" required style="min-height: 80px;"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary-gradient" style="width: 100%;">
+                <span>Post to Wall of Love 🔥</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Wall of Love (Live Party-Goer Testimonials) -->
+    <section class="wall-section" id="wallOfLove">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">SOCIAL PROOF & HYPE</span>
+          <h2 class="section-title">Wall of <span class="pink-purple-gradient-text">Love</span></h2>
+          <p class="section-subtitle">Real quotes from party lovers, techno souls and after-hours regulars across Udaipur.</p>
+        </div>
+
+        <div class="wall-grid" id="wallOfLoveGrid">
+          <!-- Dynamic Testimonials from config.js + Newly Added Reviews -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 12. Quick VIP Inquiry Modal -->
+  <div class="modal-overlay" id="quickVipModal" onclick="if(event.target === this) closeVipModal()">
+    <div class="modal-box glass-panel">
+      <button class="modal-close" onclick="closeVipModal()" aria-label="Close Modal">&times;</button>
+      
+      <div class="modal-header">
+        <span class="section-badge">VIP GUESTLIST & PASS BOOKING</span>
+        <h3 class="modal-title pink-purple-gradient-text" id="modalPartyTitle">Exclusive Access</h3>
+        <p style="color: var(--text-secondary); font-size: 0.88rem;">Direct connect with the Beyond Hours host team via WhatsApp.</p>
+      </div>
+
+      <form onsubmit="sendQuickVipInquiry(event)">
+        <div class="form-group">
+          <label class="form-label" for="vipInputName">Your Full Name / IG Handle</label>
+          <input type="text" id="vipInputName" class="form-input" placeholder="e.g. Rahul Sharma (@rahul_sh)" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="vipInputGuests">Guest Count / Group Size</label>
+          <select id="vipInputGuests" class="form-select">
+            <option value="Just Me (Stag / Single)">Just Me (Single / Stag)</option>
+            <option value="Couple (2 Guests)" selected>Couple (2 Guests)</option>
+            <option value="Group of 3-5 Friends">Group of 3-5 Friends</option>
+            <option value="VIP Table (6+ Guests)">VIP Table (6+ Guests)</option>
+            <option value="Private Event Booking">Private Event / Birthday Booking</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary-gradient" style="width: 100%; margin-top: 10px;">
+          <span>Request Pass on WhatsApp</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M22 2 11 13"></path><path d="m22 2-7 20-4-9-9-4 20-7z"></path></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 13. Fullscreen Gallery Lightbox Modal -->
+  <div class="lightbox-modal" id="galleryLightbox" onclick="if(event.target === this) closeLightbox()">
+    <div class="lightbox-content-box glass-panel">
+      <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close Lightbox">&times;</button>
+      <div class="lightbox-image-wrap">
+        <img src="" alt="Gallery Preview" id="lightboxImg" />
+      </div>
+      <div class="lightbox-info-pane">
+        <h3 class="lightbox-title" id="lightboxTitle"></h3>
+        <span class="lightbox-location" id="lightboxLocation"></span>
+        <p class="lightbox-desc" id="lightboxDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 14. Comprehensive Master Footer & Social Hub -->
+  <footer class="master-footer">
+    <div class="footer-container">
+      
+      <div class="footer-top-grid">
+        
+        <!-- Brand Col -->
+        <div class="footer-brand-col">
+          <div class="footer-logo-header">
+            <div class="footer-logo-emblem">
+              <img src="assets/images/beyond_hours_logo.png" alt="Beyond Hours Logo" class="footer-logo-img" />
+            </div>
+            <div>
+              <div class="footer-brand-name pink-purple-gradient-text">BEYOND HOURS</div>
+              <div class="footer-tagline-script">stories begin ♡</div>
+            </div>
+          </div>
+          <p class="footer-bio-text">
+            Udaipur's premier dark luxury nightlife & after-hours social collective. Curating unscripted midnight memories, melodic rooftops and private villa gatherings.
+          </p>
+          <p style="color: var(--soft-lavender); font-size: 0.85rem;">
+            📍 Udaipur, Rajasthan • <a href="https://www.instagram.com/beyondhours_?igsi=N2tiY3h5NTVkNXpt" target="_blank" rel="noopener noreferrer" style="color: var(--neon-pink); text-decoration: none;">@beyondhours_</a>
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-col-title">EXPLORE</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#instagramHub" class="footer-link">Instagram Profile</a></li>
+            <li><a href="#drops" class="footer-link">Latest Drops & Reels</a></li>
+            <li><a href="#events" class="footer-link">Upcoming Parties</a></li>
+            <li><a href="#gallery" class="footer-link">Nightlife Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- VIP Services -->
+        <div>
+          <h4 class="footer-col-title">VIP & SOCIAL</h4>
+          <ul class="footer-links-list">
+            <li><a href="#booking" class="footer-link">VIP Table Booking</a></li>
+            <li><a href="#booking" class="footer-link">Private Villa Parties</a></li>
+            <li><a href="#feedback" class="footer-link">Vibe Check & Rating</a></li>
+            <li><a href="#wallOfLove" class="footer-link">Wall of Love</a></li>
+            <li><a href="https://www.instagram.com/beyondhours_?igsi=N2tiY3h5NTVkNXpt" target="_blank" rel="noopener noreferrer" class="footer-link" style="color: var(--neon-pink);">Instagram @beyondhours_ ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- VIP Drop Alert Newsletter -->
+        <div>
+          <h4 class="footer-col-title">VIP DROP ALERTS</h4>
+          <div class="newsletter-box">
+            <p class="newsletter-desc">Get early-bird tickets and secret venue locations sent directly to you before public announcements.</p>
+            <form id="dropAlertForm" class="newsletter-input-group">
+              <input type="text" id="alertContactInput" class="newsletter-input" placeholder="WhatsApp / Phone No." required />
+              <button type="submit" class="btn btn-primary-gradient newsletter-btn">
+                <span>Join List</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>© 2026 Beyond Hours Collective. All Rights Reserved.</div>
+        <div style="color: var(--soft-lavender);">"we make plans you didn't know you needed."</div>
+        <div>Crafted with pure nightlife energy in Udaipur 🌙</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/canvas.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
