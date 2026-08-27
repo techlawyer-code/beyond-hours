@@ -794,60 +794,40 @@ function initQuickModals() {
 }
 
 /**
- * Ambient Sound Synthesizer
+ * 10. Real Nightlife Soundtrack Audio Player
  */
 function initAudioVibe() {
   const toggleBtn = document.getElementById('vibeAudioToggle');
   if (!toggleBtn) return;
 
+  const audio = new Audio('assets/audio/beyond_hours_soundtrack.mp3');
+  audio.loop = true;
+  audio.volume = 0.7;
+
   let isPlaying = false;
-  let audioCtx = null;
-  let gainNode = null;
-  let osc1 = null;
-  let osc2 = null;
 
   toggleBtn.addEventListener('click', () => {
     if (!isPlaying) {
-      try {
-        const AudioContext = window.AudioContext || window.webkitAudioContext;
-        audioCtx = new AudioContext();
-        gainNode = audioCtx.createGain();
-        gainNode.gain.setValueAtTime(0.04, audioCtx.currentTime);
-
-        osc1 = audioCtx.createOscillator();
-        osc1.type = 'sine';
-        osc1.frequency.setValueAtTime(110, audioCtx.currentTime);
-
-        osc2 = audioCtx.createOscillator();
-        osc2.type = 'triangle';
-        osc2.frequency.setValueAtTime(164.81, audioCtx.currentTime);
-
-        osc1.connect(gainNode);
-        osc2.connect(gainNode);
-        gainNode.connect(audioCtx.destination);
-
-        osc1.start();
-        osc2.start();
-
+      audio.play().then(() => {
         isPlaying = true;
         toggleBtn.classList.add('playing');
         toggleBtn.innerHTML = `
           <span class="sound-wave active"><span></span><span></span><span></span></span>
-          <span>Vibe Audio ON</span>
+          <span>Soundtrack Playing 🎵</span>
         `;
-      } catch (err) {
-        console.warn('Web Audio could not be started', err);
-      }
+        showToast('Now Playing 🎵', 'Beyond Hours Exclusive Midnight Party Soundtrack');
+      }).catch(err => {
+        console.warn('Audio playback error:', err);
+      });
     } else {
-      if (audioCtx) {
-        audioCtx.close();
-      }
+      audio.pause();
       isPlaying = false;
       toggleBtn.classList.remove('playing');
       toggleBtn.innerHTML = `
         <span class="sound-wave"><span></span><span></span><span></span></span>
         <span>Soundtrack Vibe</span>
       `;
+      showToast('Soundtrack Paused ⏸️', 'Tap anytime to restart the nightlife vibe');
     }
   });
 }
