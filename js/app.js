@@ -603,8 +603,10 @@ function initVibeFeedback() {
 }
 
 /**
- * 10. Wall of Love Renderer
+ * 10. Wall of Love Renderer (Max 6 Reviews initially + View All Toggle)
  */
+let isWallExpanded = false;
+
 function initWallOfLove() {
   renderWallOfLove();
 }
@@ -647,12 +649,31 @@ function renderWallOfLove() {
     return;
   }
 
-  grid.innerHTML = allReviews.map(item => `
+  const reviewsToDisplay = isWallExpanded ? allReviews : allReviews.slice(0, 6);
+
+  let html = reviewsToDisplay.map(item => `
     <div class="review-card glass-panel" data-tilt>
       ${createReviewCardHTML(item)}
     </div>
   `).join('');
+
+  if (allReviews.length > 6) {
+    html += `
+      <div style="grid-column: 1 / -1; text-align: center; margin-top: 24px;">
+        <button type="button" class="btn btn-primary-gradient" onclick="toggleWallExpansion()">
+          <span>${isWallExpanded ? 'Show Less ⌃' : `View All Reviews (${allReviews.length}) ⌵`}</span>
+        </button>
+      </div>
+    `;
+  }
+
+  grid.innerHTML = html;
 }
+
+window.toggleWallExpansion = function() {
+  isWallExpanded = !isWallExpanded;
+  renderWallOfLove();
+};
 
 function createReviewCardHTML(item) {
   const starIcons = '★'.repeat(item.rating) + '☆'.repeat(Math.max(0, 5 - item.rating));
@@ -683,6 +704,62 @@ function createReviewCardHTML(item) {
       <span class="vibe-chip">✨ Ambience: ${item.vibes.ambience}</span>
     </div>
   `;
+}
+
+/**
+ * 11. Real Nightlife Soundtrack Audio Player with Instant Auto-Play on Interaction
+ */
+function initAudioVibe() {
+  const toggleBtn = document.getElementById('vibeAudioToggle');
+  if (!toggleBtn) return;
+
+  const audio = new Audio('assets/audio/beyond_hours_soundtrack.mp3');
+  audio.loop = true;
+  audio.volume = 0.7;
+
+  let isPlaying = false;
+
+  const startPlayback = () => {
+    if (!isPlaying) {
+      audio.play().then(() => {
+        isPlaying = true;
+        toggleBtn.classList.add('playing');
+        toggleBtn.innerHTML = `
+          <span class="sound-wave active"><span></span><span></span><span></span></span>
+          <span>Soundtrack Playing 🎵</span>
+        `;
+      }).catch(() => {});
+    }
+  };
+
+  // Browser Autoplay Policy: Automatically starts on user's first click, scroll, or tap anywhere!
+  const autoPlayHandler = () => {
+    startPlayback();
+    ['click', 'touchstart', 'scroll', 'keydown'].forEach(evt => {
+      window.removeEventListener(evt, autoPlayHandler);
+    });
+  };
+
+  ['click', 'touchstart', 'scroll', 'keydown'].forEach(evt => {
+    window.addEventListener(evt, autoPlayHandler, { once: true });
+  });
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (!isPlaying) {
+      startPlayback();
+      showToast('Now Playing 🎵', 'Beyond Hours Exclusive Midnight Party Soundtrack');
+    } else {
+      audio.pause();
+      isPlaying = false;
+      toggleBtn.classList.remove('playing');
+      toggleBtn.innerHTML = `
+        <span class="sound-wave"><span></span><span></span><span></span></span>
+        <span>Soundtrack Vibe</span>
+      `;
+      showToast('Soundtrack Paused ⏸️', 'Tap anytime to restart the nightlife vibe');
+    }
+  });
 }
 
 /**
