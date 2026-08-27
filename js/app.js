@@ -306,7 +306,31 @@ function initLatestDrops() {
 function initUpcomingEvents() {
   const config = window.BEYOND_CONFIG;
   const grid = document.getElementById('eventsGrid');
-  if (!config || !config.upcomingEvents || !grid) return;
+  if (!config || !grid) return;
+
+  if (!config.upcomingEvents || config.upcomingEvents.length === 0) {
+    grid.innerHTML = `
+      <div class="no-events-card glass-panel" style="grid-column: 1 / -1; padding: 50px 30px; text-align: center; max-width: 800px; margin: 0 auto; border: 1px solid rgba(255, 46, 147, 0.4); border-radius: var(--radius-lg); box-shadow: 0 16px 45px rgba(0, 0, 0, 0.7), 0 0 30px var(--pink-glow);">
+        <div style="font-size: 2.2rem; margin-bottom: 10px;">🌙✨</div>
+        <span class="section-badge">AFTER-HOURS CALENDAR</span>
+        <h3 style="font-family: var(--font-logo-serif); font-size: 2rem; margin-bottom: 12px; color: #FFF;">Next Party Dropping Soon</h3>
+        <p style="color: var(--text-secondary); max-width: 550px; margin: 0 auto 28px; font-size: 0.96rem; line-height: 1.6;">
+          Our next exclusive Udaipur after-hours experience & secret gathering will be announced live on Instagram. Join the VIP reservation list to secure private tables and early invites!
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="#booking" class="btn btn-primary-gradient">
+            <span>Request VIP Reservation</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+          <a href="${config.brand.instagramUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary-gradient hero-social-btn">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+            <span>Follow on Instagram</span>
+          </a>
+        </div>
+      </div>
+    `;
+    return;
+  }
 
   grid.innerHTML = config.upcomingEvents.map(ev => {
     let badgeStyle = "status-active";

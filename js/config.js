@@ -109,81 +109,8 @@ const BEYOND_CONFIG = {
     }
   ],
 
-  // Upcoming Events & Passes
-  upcomingEvents: [
-    {
-      id: "neon-lake-mirage",
-      title: "Neon Lake Mirage",
-      edition: "EDITION 04",
-      dateBadge: {
-        month: "MAR",
-        day: "07",
-        weekday: "SATURDAY"
-      },
-      time: "10:00 PM — 4:00 AM",
-      venue: "Fateh Sagar Skyline Deck, Udaipur",
-      genre: "Melodic House & Techno",
-      status: "Selling Fast 🔥",
-      statusType: "hot",
-      pricing: "Passes from ₹1,499",
-      image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1200&auto=format&fit=crop",
-      description: "Lakeside neon laser stage, international DJ lineup, and signature cocktail bars under the midnight stars."
-    },
-    {
-      id: "midnight-eclipse",
-      title: "Midnight Eclipse: Vault Underground",
-      edition: "WAREHOUSE SERIES",
-      dateBadge: {
-        month: "MAR",
-        day: "13",
-        weekday: "FRIDAY"
-      },
-      time: "11:00 PM TILL LATE",
-      venue: "The Vault Underground, Old City Udaipur",
-      genre: "Peak Time & Hypnotic Techno",
-      status: "Early Bird Active ✨",
-      statusType: "active",
-      pricing: "Passes from ₹999",
-      image: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop",
-      description: "Dark strobe sanctuary, raw sound pressure, and relentless underground rhythms inside Udaipur's secret vault."
-    },
-    {
-      id: "royal-velvet-afterhours",
-      title: "Royal Velvet Soirée",
-      edition: "VIP INVITATIONAL",
-      dateBadge: {
-        month: "MAR",
-        day: "21",
-        weekday: "SATURDAY"
-      },
-      time: "10:30 PM — 5:00 AM",
-      venue: "Secret Palace Courtyard, Udaipur",
-      genre: "Afro Tech & Deep Melodic",
-      status: "VIP Tables Only 👑",
-      statusType: "vip",
-      pricing: "Tables & Guestlist Only",
-      image: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=1200&auto=format&fit=crop",
-      description: "Ultra-luxury gathering for Udaipur's elite. Private velvet cabanas, bespoke bottle service, and world-class selectors."
-    },
-    {
-      id: "sunset-to-moonlight",
-      title: "Sunset to Moonlight",
-      edition: "ROOFTOP SESSIONS",
-      dateBadge: {
-        month: "MAR",
-        day: "29",
-        weekday: "SUNDAY"
-      },
-      time: "5:30 PM — 1:00 AM",
-      venue: "Pichola Panorama Deck, Udaipur",
-      genre: "Sunset Organic into Progressive",
-      status: "Phase 1 Open ⚡",
-      statusType: "active",
-      pricing: "Passes from ₹1,299",
-      image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1200&auto=format&fit=crop",
-      description: "Golden hour lake view transitions seamlessly into a starry night dance party with gourmet food & mixology."
-    }
-  ],
+  // Upcoming Events & Passes (Empty for now until next official drop is scheduled)
+  upcomingEvents: [],
 
   // Gallery Categories & Items
   galleryCategories: [
