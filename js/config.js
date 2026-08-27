@@ -18,11 +18,11 @@ const BEYOND_CONFIG = {
     logoUrl: "assets/images/beyond_hours_logo.png"
   },
 
-  // Real Instagram Account Stats for @beyondhours_ (Updated: 28 Followers, 33 Following, 2 Posts)
+  // Real Instagram Account Stats for @beyondhours_ (Live Synced: 30 Followers, 44 Following, 3 Posts)
   instagramStats: {
-    posts: 2,
-    followers: 28,
-    following: 33,
+    posts: 3,
+    followers: 30,
+    following: 45,
     category: "Nightlife & Event Planning",
     bio: "we make plans you didn't know you needed. Where plans end, stories begin ♡ | 📍 Udaipur"
   },
