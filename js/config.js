@@ -125,66 +125,66 @@ const BEYOND_CONFIG = {
     {
       id: "gal-1",
       category: "techno",
-      title: "Dark Strobe Sanctuary",
-      location: "Old City Vault, Udaipur",
-      image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1200&auto=format&fit=crop",
-      description: "Hands up in the smoke machine haze as the baseline drops at 2:30 AM."
+      title: "Pioneer DJ Live Deck",
+      location: "Underground Vault, Udaipur",
+      image: "https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?q=80&w=1200&auto=format&fit=crop",
+      description: "Deep bass, hypnotic synthesizer drops and unfiltered electronic groove till 4 AM."
     },
     {
       id: "gal-2",
       category: "rooftop",
-      title: "Lake Pichola Skyline",
-      location: "Rooftop Lounge, Udaipur",
-      image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop",
-      description: "Champagne flutes sparkling under fairy lights overlooking the calm lake."
+      title: "Lake Pichola Skyline Party",
+      location: "Skyline Terrace, Udaipur",
+      image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1200&auto=format&fit=crop",
+      description: "Starry lakeside horizon, champagne flutes and melodic deep house rhythms."
     },
     {
       id: "gal-3",
       category: "neon",
-      title: "Neon Electric Rush",
-      location: "Fateh Sagar Deck, Udaipur",
-      image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop",
-      description: "Unfiltered euphoria during our flagship commercial electronic night."
+      title: "Laser Beam Symphony",
+      location: "Fateh Sagar Arena, Udaipur",
+      image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1200&auto=format&fit=crop",
+      description: "Neon laser visuals cutting through the haze with 130 BPM energetic drops."
     },
     {
       id: "gal-4",
       category: "vip",
-      title: "Velvet Cabana Service",
-      location: "Private Villa Estate, Udaipur",
-      image: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?q=80&w=1200&auto=format&fit=crop",
-      description: "Exclusive tables, premium bottle sparklers, and tailored VIP hospitality."
+      title: "VIP Bottle Sparkler Cabana",
+      location: "Private Luxury Estate, Udaipur",
+      image: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=1200&auto=format&fit=crop",
+      description: "Exclusive tables, premium bottle service, sparklers and tailored hospitality."
     },
     {
       id: "gal-5",
       category: "techno",
-      title: "Hypnotic DJ Set",
-      location: "Vault Series, Udaipur",
-      image: "https://images.unsplash.com/photo-1571266028243-3716f02d2d2e?q=80&w=1200&auto=format&fit=crop",
-      description: "Guest headliner spinning deep melodic grooves till the early morning."
+      title: "Dark Strobe Sanctuary",
+      location: "The Vault Underground, Udaipur",
+      image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1200&auto=format&fit=crop",
+      description: "Hands up in the strobe light haze as the underground rhythm takes control."
     },
     {
       id: "gal-6",
       category: "rooftop",
-      title: "Midnight Cocktails & Smiles",
-      location: "Skyline Terrace, Udaipur",
-      image: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=1200&auto=format&fit=crop",
-      description: "Where strangers turn into friends and memorable stories begin."
+      title: "Midnight Cocktails & Sparkles",
+      location: "Panorama Deck, Udaipur",
+      image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop",
+      description: "Where unscripted midnight conversations turn into unforgettable party stories."
     },
     {
       id: "gal-7",
       category: "neon",
-      title: "Laser Beam Symphony",
-      location: "Grand Arena, Udaipur",
-      image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=1200&auto=format&fit=crop",
-      description: "Multi-colored lasers cutting through the darkness with 130 BPM beats."
+      title: "Euphoric Bass Drop",
+      location: "Grand Arena Stage, Udaipur",
+      image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop",
+      description: "100% festival crowd energy turning up the heat on the dance floor."
     },
     {
       id: "gal-8",
       category: "vip",
-      title: "The Inner Circle",
+      title: "Private Villa After-Hours",
       location: "Heritage Courtyard, Udaipur",
-      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=1200&auto=format&fit=crop",
-      description: "Private after-hours moments crafted exclusively for the party family."
+      image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1200&auto=format&fit=crop",
+      description: "Bespoke after-hours revelry crafted exclusively for the Beyond Hours circle."
     }
   ],
 
