@@ -11,7 +11,7 @@ const BEYOND_CONFIG = {
     tagline: "we make plans you didn't know you needed.",
     subTagline: "Where plans end, stories begin.",
     location: "Udaipur, Rajasthan",
-    whatsappNumber: "+919876543210",
+    whatsappNumber: "+91807056574",
     foundingYear: "2024",
     email: "vibes@beyondhours.com",
     cityBadge: "📍 Udaipur's Premier Nightlife & Event Collective",

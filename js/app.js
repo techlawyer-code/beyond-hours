@@ -485,7 +485,7 @@ function initVipBookingForm() {
       `_Please confirm availability and share packages!_`
     );
 
-    const waNum = config?.brand?.whatsappNumber ? config.brand.whatsappNumber.replace(/[^0-9]/g, '') : '919876543210';
+    const waNum = config?.brand?.whatsappNumber ? config.brand.whatsappNumber.replace(/[^0-9]/g, '') : '91807056574';
     window.open(`https://wa.me/${waNum}?text=${message}`, '_blank');
 
     showToast('VIP Request Sent! 🍾', 'Your inquiry has been opened in WhatsApp. The Beyond Hours team will respond promptly!');
@@ -763,7 +763,7 @@ function initQuickModals() {
       `Please let me know entry passes and VIP table availability!`
     );
 
-    const waNum = config?.brand?.whatsappNumber ? config.brand.whatsappNumber.replace(/[^0-9]/g, '') : '919876543210';
+    const waNum = config?.brand?.whatsappNumber ? config.brand.whatsappNumber.replace(/[^0-9]/g, '') : '91807056574';
     window.open(`https://wa.me/${waNum}?text=${text}`, '_blank');
     closeVipModal();
   };
