@@ -87,17 +87,17 @@ function initInstagramProfileHub() {
 
       <div class="ig-metrics-bar">
         <div class="ig-metric-item">
-          <div class="ig-metric-num">${stats.posts}</div>
+          <div class="ig-metric-num">${stats.posts}+</div>
           <div class="ig-metric-label">Posts</div>
         </div>
         <div class="ig-metric-divider"></div>
         <div class="ig-metric-item">
-          <div class="ig-metric-num">${stats.followers}</div>
+          <div class="ig-metric-num">${stats.followers}+</div>
           <div class="ig-metric-label">Followers</div>
         </div>
         <div class="ig-metric-divider"></div>
         <div class="ig-metric-item">
-          <div class="ig-metric-num">${stats.following}</div>
+          <div class="ig-metric-num">${stats.following}+</div>
           <div class="ig-metric-label">Following</div>
         </div>
         <div class="ig-metric-divider"></div>
